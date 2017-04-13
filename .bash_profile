@@ -1,3 +1,3 @@
-echo "Executing ~/.bash_profile in current shell"
+echo "Loading ~/.bash_profile"
 
 source ~/.profile

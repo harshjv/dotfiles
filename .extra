@@ -1,4 +1,4 @@
-echo "Executing ~/.extra in current shell"
+echo "Loading ~/.extra"
 
 export NVM_DIR="/Users/harsh/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

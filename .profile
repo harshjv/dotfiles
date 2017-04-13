@@ -1,4 +1,4 @@
-echo "Executing ~/.profile in current shell"
+echo "Loading ~/.profile"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
