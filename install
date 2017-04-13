@@ -1,7 +1,8 @@
 #! /bin/bash
 
-echo "Symlinking dotfiles to $HOME"
+CURRENT_DIR=$(pwd)
 
+echo "Symlinking dotfiles to $HOME"
 for file in $(cat files); do
-  ln -s $file "$HOME/$file" &> /dev/null
+  ln -s "$CURRENT_DIR/$file" "$HOME/$file"
 done
