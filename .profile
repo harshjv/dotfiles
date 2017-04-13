@@ -32,7 +32,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-# [[ -s "/Users/harshvakharia/.gvm/scripts/gvm" ]] && source "/Users/harshvakharia/.gvm/scripts/gvm"
+# [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
