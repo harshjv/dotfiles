@@ -19,7 +19,7 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo'ed
 alias sudo='sudo '
 
 # Stopwatch
@@ -59,48 +59,19 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
   alias "$method"="lwp-request -m '$method'"
 done
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
-
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# alias trash="rmtrash"
-
-alias activatetorch="source ~/torch/install/bin/torch-activate"
 
 transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
-alias gc="git clone"
-alias gp="git push"
-
-alias gpo="gp origin"
-alias gpu="gp upstream"
-
-alias gpoh="gpo HEAD"
-alias gpuh="gpu HEAD"
-
-alias ga="git add"
 alias gs="git status"
-alias gd="git diff"
-
-alias gphm="git push heroku master"
-
 alias o="open ."
 alias a="atom ."
 alias g="gitup"
-
 alias qan="xattr -rd com.apple.quarantine"
 
-# please use yarn instead
-alias nis="npm install --save"
-alias nus="npm uninstall --save"
-alias nisd="npm install --save-dev"
-alias nusd="npm uninstall --save-dev"
-
 # whatever
-alias cdp="cd ~/Projects"
+alias cdw="cd ~/Work"
 alias s="http-server"
 alias mypubkey="cat ~/.ssh/id_rsa.pub"
