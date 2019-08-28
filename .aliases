@@ -73,5 +73,20 @@ alias qan="xattr -rd com.apple.quarantine"
 
 # whatever
 alias cdw="cd ~/Work"
-alias s="http-server"
+alias s="serve"
 alias mypubkey="cat ~/.ssh/id_rsa.pub"
+
+#bitcoin
+# alias bstart="cd ~/.bitcore/regtest && bitcored"
+alias bcli="bitcoin-cli -conf=/Users/harsh/.bitcore/regtest/data/bitcoin.conf"
+alias bstop="bcli stop"
+
+# ports
+alias openports="lsof -PiTCP -sTCP:LISTEN"
+
+alias asdh="git add . && git commit -m \"yet another lazy commit\" && git push heroku HEAD"
+alias asdo="git add . && git commit -m \"yet another lazy commit\" && git push origin HEAD"
+alias gg="lazygit"
+
+alias eth="ganache-cli -i 420  -m \"ahead armed mirror lizard estate tomato force balcony black use liberty crash\""
+alias btc="cd ~/.bitcore/regtest && bitcored"

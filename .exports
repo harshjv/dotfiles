@@ -28,6 +28,7 @@ export GREP_OPTIONS='--color=auto';
 
 # Add ~/.bin to PATH
 export PATH="$HOME/.bin:$PATH"; # new
+export PATH="$HOME/.deno/bin:$PATH";
 
 # Go
 # export GOPATH="$HOME/Projects/GoProjects";
